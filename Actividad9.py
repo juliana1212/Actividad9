@@ -1,3 +1,10 @@
+#Para leeer archivos
+#nombres_leidos = []
+with open("nombres.txt", "r") as archivo:
+    for linea in archivo:
+        nombres_leidos.append(linea.strip())
+
+print("nombres leidos desde el archivo son: ", "nombres_leidos")
 from typing import Tuple
 
 class DatosMeteorologicos:
@@ -5,9 +12,9 @@ class DatosMeteorologicos:
         self.nombre_archivo = nombre_archivo
 
     def procesar_datos(self) -> Tuple[float, float, float, float, str]:
-# Variables para los promedios
+#Definimos las variables para leer la temperatura, humedad, presion, viento
         total_temperatura = 0
-        total_humedad = 0
+        total_humedad = 0 
         total_presion = 0
         total_viento_x = 0
         total_viento_y = 0
